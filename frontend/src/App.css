@@ -2,3 +2,38 @@
   padding: 0;
   margin: 0;
 }
+
+.searchinput{
+  border:none;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 18px;
+  padding-left: 20px;
+  width: 270px;
+  height: 40px;
+}
+
+.bottomcontent{
+  margin-top: 80px;
+}
+
+.bottomcontent h5{
+  color:gray;
+}
+
+.dropdown{
+  width: 50px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  margin-bottom: 120px;
+  right:20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+/* Login Form CSS */
