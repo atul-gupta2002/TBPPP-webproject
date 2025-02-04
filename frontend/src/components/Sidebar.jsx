@@ -3,8 +3,8 @@ import { FaPlus } from "react-icons/fa";
 
 export default function Sidebar() {
   return (
-    <div className='mt-5 mx-5'>
-      <h1 className='fs-1 fw-bold'>Logo</h1>
+    <div className='mt-3 mx-3' >
+      <h1 className='fs-1 fw-bold '>InscribeX</h1>
       <div 
         className='mt-3 mx-2 d-flex justify-content-center align-items-center text-white rounded-circle' 
         style={{ 
@@ -16,7 +16,7 @@ export default function Sidebar() {
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
       >
-        <FaPlus size={35} />
+        <FaPlus size={35} className='text-white'></FaPlus>
       </div>
     </div>
   );

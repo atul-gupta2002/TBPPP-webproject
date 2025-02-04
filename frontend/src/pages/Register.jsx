@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
+import { post } from '../../services/ApiEndPoint'
+import toast from 'react-hot-toast'
 
 
-
-export default function Register() {
-  const navigate=useNavigate()
+export default function Register() { 
   const [value,setValue]=useState({
      userName:"",
      email:"",
@@ -23,10 +24,12 @@ export default function Register() {
       const request=await post('/auth/register',value)
       const response= request.data
       console.log(response)
+      
       if (response.success) {
         toast.success(response.message)
-        navigate('/login')
+        // navigate('/login')
       }
+     
     } catch (error) {
       if (error.response) {
         toast.error(error.response.data.message)
@@ -58,8 +61,8 @@ export default function Register() {
 
         <button className='btn btn-success w-100 mb-3'>Register</button>
 
-        <div className='text-center'>
-          <p>Already have an account <Link to={'/login'}>Login</Link></p>
+        <div className='text-center' >
+          <p >Already have an account <Link to={'/login'}>Login</Link></p>
         </div>
       </form>
     </div>

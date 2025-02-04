@@ -19,7 +19,7 @@ const Register = async (req, res) => {
             userName,email,password:hashedPassword
         })
         NewUser.save()
-        res.status(400).json({success:true,message:'User registered successfully',User:NewUser})
+        res.status(200).json({success:true,message:'User registered successfully',User:NewUser})
     }
     catch(error){
         console.log(error)
@@ -73,4 +73,3 @@ const Logout = async (req, res) => {
 
 
 export {Register,Login,Logout}
-

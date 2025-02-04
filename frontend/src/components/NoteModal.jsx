@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NoteModal({ title }) {
+export default function NoteModal({ title ,handleTitleChange, value,handleCreateNote}) {
   return (
     <>
      
@@ -26,7 +26,7 @@ export default function NoteModal({ title }) {
             </div>
             <div className="modal-body">
             <form class="form-floating">
-  <input type="email" class="form-control" id="floatingInputValue" />
+  <input type="email" class="form-control" id="floatingInputValue" value={value} onChange={handleTitleChange}/>
   <label for="floatingInputValue">Enter your notes</label>
 </form>
 
@@ -39,7 +39,7 @@ export default function NoteModal({ title }) {
               >
                 Close
               </button>
-              <button type="button" className="btn btn-dark">
+              <button type="button" className="btn btn-dark" onClick={handleCreateNote}>
                 Save changes
               </button>
             </div>
